@@ -12,31 +12,30 @@
 
 <body>
     <div class="container">
-        <h1>Nguyen Hong Quan</h1>
-        <input type="text" id="newItem">
-        <button onclick="addItem()">Add</button>
+        <div class="row p-2">
+            <div class="col-md-6 col-12">
+                <a href="./index.html" class="btn btn-primary">Index</a>
+                <a href="./students.html" class="btn btn-primary">HTTP Request methods</a>
+            </div>
+            <div class="col-md-6 col-12">
+                <input type="text" id="newItem">
+                <button onclick="addItem()" class="btn btn-warning">Add</button>
 
-        <ul id="todo-list">
+                <ul id="todo-list">
 
-        </ul>
+                </ul>
+            </div>
+        </div>
     </div>
     <!-- Import Axios -->
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script type="text/javascript">
-        var storageKey = 'todoList';
-        // var todoList = [
-        //     'go to bed',
-        //     'go to school',
-        //     'go to eat'
-        // ];
-        var dataString = localStorage.getItem(storageKey);
-        var todoList;
-        if (dataString) {
-            todoList = JSON.parse(dataString);
-        } else {
-            todoList = [];
-        }
+        var url = 'http://localhost:3030/todo';
+        axios.get(url).then(function(res) {
+            var items = res.data;
+            console.log('Data loading ...', items);
+            render(items);
+        });
 
         function addItem() {
             /**
@@ -53,14 +52,14 @@
             localStorage.setItem(storageKey, JSON.stringify(todoList));
         }
 
-        function render() {
+        function render(items) {
             var htmlList = document.getElementById('todo-list');
-            var content = todoList.map(function(item) {
-                return '<li>' + item + '</li>';
+            var content = items.map(function(item) {
+                return '<li>' + item.content + '</li>';
             });
             htmlList.innerHTML = content.join('');
         };
-        render();
+        // render();
     </script>
 </body>
 
