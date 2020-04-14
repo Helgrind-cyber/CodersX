@@ -1,81 +1,92 @@
 {
-    "todo": [{
-            "id": 1,
-            "content": "have a breakfast"
-        },
-        {
-            "id": 2,
-            "content": "open the computer"
-        },
-        {
-            "id": 3,
-            "content": "code something"
-        },
-        {
-            "id": 4,
-            "content": "go to bed"
-        }
-    ],
-    "results": [{
-        "gender": "male",
-        "name": {
-            "title": "Mr",
-            "first": "Ian",
-            "last": "Ray"
-        },
-        "location": {
-            "street": {
-                "number": 1677,
-                "name": "West Street"
-            },
-            "city": "Tralee",
-            "state": "Galway",
-            "country": "Ireland",
-            "postcode": 51901,
-            "coordinates": {
-                "latitude": "25.9681",
-                "longitude": "-105.4080"
-            },
-            "timezone": {
-                "offset": "-7:00",
-                "description": "Mountain Time (US & Canada)"
-            }
-        },
-        "email": "ian.ray@example.com",
-        "login": {
-            "uuid": "6b32fe47-2e10-4480-b1e9-25220cb00427",
-            "username": "whitemouse218",
-            "password": "answer",
-            "salt": "i6ebqGb0",
-            "md5": "74bebf3ca66c8cc31037a49447854bb2",
-            "sha1": "89ce10fcea1905959273a9472b4ff3cfeda27d3c",
-            "sha256": "bf4043d22b858a088490567c229bcce0fe20d243fe43bfa2eafc2b27da7c59db"
-        },
-        "dob": {
-            "date": "1961-09-30T06:00:47.155Z",
-            "age": 59
-        },
-        "registered": {
-            "date": "2004-08-17T04:55:45.782Z",
-            "age": 16
-        },
-        "phone": "011-760-0214",
-        "cell": "081-716-0837",
-        "id": {
-            "name": "PPS",
-            "value": "0663428T"
-        },
-        "picture": {
-            "large": "https://randomuser.me/api/portraits/men/15.jpg",
-            "medium": "https://randomuser.me/api/portraits/med/men/15.jpg",
-            "thumbnail": "https://randomuser.me/api/portraits/thumb/men/15.jpg"
-        },
-        "nat": "IE"
-    }],
-    "info": {
-        "seed": "e587a6085d2c9214",
-        "results": 1,
-        "page": 1,
-        "version": "1.3"
+  "todo": [
+    {
+      "id": 1,
+      "content": "have a breakfast"
+    },
+    {
+      "id": 2,
+      "content": "open the computer"
+    },
+    {
+      "id": 3,
+      "content": "code something"
+    },
+    {
+      "id": 4,
+      "content": "go to bed"
+    },
+    {
+      "content": "Make dinner",
+      "id": 5
+    },
+    {
+      "content": "Eat foods",
+      "id": 6
     }
+  ],
+  "results": [
+    {
+      "gender": "male",
+      "name": {
+        "title": "Mr",
+        "first": "Ian",
+        "last": "Ray"
+      },
+      "location": {
+        "street": {
+          "number": 1677,
+          "name": "West Street"
+        },
+        "city": "Tralee",
+        "state": "Galway",
+        "country": "Ireland",
+        "postcode": 51901,
+        "coordinates": {
+          "latitude": "25.9681",
+          "longitude": "-105.4080"
+        },
+        "timezone": {
+          "offset": "-7:00",
+          "description": "Mountain Time (US & Canada)"
+        }
+      },
+      "email": "ian.ray@example.com",
+      "login": {
+        "uuid": "6b32fe47-2e10-4480-b1e9-25220cb00427",
+        "username": "whitemouse218",
+        "password": "answer",
+        "salt": "i6ebqGb0",
+        "md5": "74bebf3ca66c8cc31037a49447854bb2",
+        "sha1": "89ce10fcea1905959273a9472b4ff3cfeda27d3c",
+        "sha256": "bf4043d22b858a088490567c229bcce0fe20d243fe43bfa2eafc2b27da7c59db"
+      },
+      "dob": {
+        "date": "1961-09-30T06:00:47.155Z",
+        "age": 59
+      },
+      "registered": {
+        "date": "2004-08-17T04:55:45.782Z",
+        "age": 16
+      },
+      "phone": "011-760-0214",
+      "cell": "081-716-0837",
+      "id": {
+        "name": "PPS",
+        "value": "0663428T"
+      },
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/men/15.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/men/15.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/men/15.jpg"
+      },
+      "nat": "IE"
+    }
+  ],
+  "info": {
+    "seed": "e587a6085d2c9214",
+    "results": 1,
+    "page": 1,
+    "version": "1.3"
+  }
 }

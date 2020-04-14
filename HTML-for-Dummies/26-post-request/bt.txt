@@ -1,0 +1,13 @@
+Tạo trang newitem.html
+Tạo đường link chuyển đến newitem
+newitem Chỉ hiển thị danh sách thôi, add chỉ hiển thì form
+===
+khó hơn
+editItem.html
+Tạo nút edit và đường link tới editItem
+có dấu #id trên url
+input.value hiển thị nội dung muốn edit
+Nút save -> lưu lại và quay lại trang chủ
+
+chuyển trang bằng js window.location.href
+lấy số 1 bằng location.hash

@@ -2,7 +2,7 @@
 <html lang="vi">
 
 <head>
-    <title>18 - AJAX</title>
+    <title>26 - POST REQUEST</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -19,7 +19,7 @@
             </div>
             <div class="col-md-6 col-12">
                 <input type="text" id="newItem">
-                <button onclick="addItem()" class="btn btn-warning">Add</button>
+                <button id="btnAdd" class="btn btn-warning">Add</button>
 
                 <ul id="todo-list">
 
@@ -29,37 +29,7 @@
     </div>
     <!-- Import Axios -->
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script type="text/javascript">
-        var url = 'http://localhost:3030/todo';
-        axios.get(url).then(function(res) {
-            var items = res.data;
-            console.log('Data loading ...', items);
-            render(items);
-        });
-
-        function addItem() {
-            /**
-            - get value in newItem
-            - push in array
-            - re-render
-            - clear input
-            */
-            var newItem = document.getElementById('newItem');
-            todoList.push(newItem.value);
-            render();
-            newItem.value = '';
-            // store data
-            localStorage.setItem(storageKey, JSON.stringify(todoList));
-        }
-
-        function render(items) {
-            var htmlList = document.getElementById('todo-list');
-            var content = items.map(function(item) {
-                return '<li>' + item.content + '</li>';
-            });
-            htmlList.innerHTML = content.join('');
-        };
-        // render();
+    <script src="./index.js">
     </script>
 </body>
 
