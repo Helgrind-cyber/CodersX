@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fire base cloud file store</title>
+
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/7.14.0/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/7.14.0/firebase-auth.js"></script>
+    <script defer src="/__/firebase/7.14.0/firebase-database.js"></script>
+    <script defer src="/__/firebase/7.14.0/firebase-firestore.js"></script>
+    <script defer src="/__/firebase/7.14.0/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/7.14.0/firebase-storage.js"></script>
+
+    <!-- initialize the SDK after all desired features are loaded -->
+    <script defer src="/__/firebase/init.js"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container mt-2">
+        <div class="col-md-6 col-12 row mb-1">
+            <input type="text" id="newItem" class="col-6">&nbsp;
+            <button id="add-btn" class="btn btn-danger">Add</button>
+        </div>
+        <ul id="todo-list" class="list-group col-md-6 col-6">
+
+        </ul>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var db = firebase.firestore();
+
+            var todoList = [];
+
+            db.collection("todos").get().then((snap) => {
+                todoList = snap.docs;
+                render();
+            });
+
+            var addBtn = document.getElementById('add-btn');
+            addBtn.addEventListener('click', addItem);
+
+            function addItem() {
+                /**
+                - get value in newItem
+                - push in array
+                - re-render
+                - clear input
+                */
+                var input = document.getElementById('newItem');
+                var newTodoItems = {
+                    content: input.value
+                };
+                db.collection('todos').add(newTodoItems)
+                    .then(function(docRef) { // document reference
+                        return docRef.get();
+                    })
+                    .then(function(snap) {
+                        todoList.push(snap);
+                        render();
+                        newItem.value = '';
+                    });
+            }
+
+            function render() {
+                var htmlList = document.getElementById('todo-list');
+                var content = todoList.map(function(item) {
+                    var data = item.data();
+                    return '<li class="list-group-item">' + data.content + '</li>';
+                });
+                htmlList.innerHTML = content.join('');
+            };
+        });
+    </script>
+</body>
+
+</html>
