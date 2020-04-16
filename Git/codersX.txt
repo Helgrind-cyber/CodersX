@@ -1,0 +1,85 @@
+18/03/2020
+- intronduction HTML
+- editors
+- basic
+- elemets: start tag, end tag, nested element.
+- attribute: href, src, width, height, alt, style, lang attribute, title, disable, id
+- heading: h1 -> h6, hr, head
+- paragraphs: p, pre
+- styles="property:value;" background, background-color, color, font-family, font-size, text-align
+- text formating: b, strong, em, i, mark, small, del, ins, sub, sup
+- quotation and citation: q, blockquote, abbr, address. cite, bdo
+- HTML comment
+- colors: color name, color value: rgb, rgba, hex, hsl, hsla
+- rgb colors: rgba(red, green, blue, alpha) alpha value from 0.0 to 1.0
+- HEX colors: #rrggbb
+- HSL value: hsl(hue, saturation, lightness)
+- HTML styles - CSS: there are 3 ways to add CSS in HTML elements: inline, internal using <style></style>, external
+- links: hyperlinks and locallinks, attribute target: _blank/_self/_parent/_top
++ link colors: change by css
++ link bookmarks: 1. create id, 2. add this link use '#'
+- HTML images: <img src='' /> src can use url, local link
+    + img map:
+    + background-image, background-repeat repeat/no-repeat, background-size: cover/ 100% 100%, background-attachment: fixed
+    + picture: different images on different screen sizes
+- table: thead, tbody, tfoot, tr > th, tr > td, caption, colgroup, col, colspan, rowspan
+- list ul > li, ol > li, dl > dt dd
+- block Elements and inline elements:
++ block elements: div, p, article, aside, form, footer, h1 -> h6, main, header, nav, ul, ol, section, table
++ inline elements:
+- class, id
+- iframe
+- script
+- filePath
+- head: meta, link, title, style, script, base
+- layout
+- web responsive: <meta name="viewport" content="width=device-width, initial-scale=1.0"> @media
+- code: <code></code> <kbd></kbd> <samp></samp> <var>
+- semantics: figure > figcaption: define the image caption
+- entities: https://www.w3schools.com/html/html_entities.asp
+- symbols: https://www.w3schools.com/html/html_symbols.asp
+- emojis: https://w3schools.com/html/html5_semantic_elements.asp
+- charset
+- URL encode
+- XHTML
+- Style guide
+=========================================================================
+26/03/2020
+- Form:
+- Input
+    + input type
+=========================================================================
+12/04/2020
+- Axios
+- json.server
+- Fetch API:
+=========================================================================
+15/04/2020
+- Git credential:
+    + git config --global credential.helper "cache --timeout=18000"
+    + gg 'gnome keyring' 'git ssh'
+- git reset: huỷ commit đã tạo
+    + git reset --soft 'hash': quay lai commit được chỉ định, uncommit tất cả các commit trước commit truyền vào ( đã add, chua commit )
+    + git reset --mixed 'hash': đưa commit về working directory ( chưa add, chưa commit )
+    + git reset --hard 'hash': xóa hẳn commit, xóa cả file
+- git revert 'hash': đảo lại commit ( + -> -)
+- .gitignore: không commit, add thư viện đã cài chỉ add json thôi
+- github:
+    + git remote add origin link: add project vao repo có sẵn
+    + git push -u orign master: push len master branch o lan dau tien
+- push a remote branch
+- pull request
+- review code in local:
+    + git fetch orgin 'branch name': tải code ở nhánh mới trên remote xuống
+- resolve conflicts:
+    when will conflicts happen?
+    1. Changing the same file + same line.
+    2. A delete file X, B modified file X.
+ method 1:
+    + Using `git base master`
+    + Resolve conflict. Delete codes don't want to exist
+    + git add 'filename' -> git rebase --continue
+ method 2:
+    + Merge updated master to feature branch
+    + resolve conflict
+    + commit and push
