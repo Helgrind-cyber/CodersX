@@ -6,6 +6,9 @@ html(lang="en")
         title Users Page
     body
         a(href="/") Home
+        form(action="/user/search", method="get")
+            input(type="text", placeholder="Search ....", name="q")
+            button(type="submit") Submit
         ul
             each user in users
                 li= user.name + ' - ' + user.age + ' - ' + user.gender
