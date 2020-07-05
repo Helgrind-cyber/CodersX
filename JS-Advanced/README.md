@@ -17,3 +17,9 @@
 > Bài 4: Arrow function expresstion (fat arrow)
 - Sự khác nhau giữa arrow func và func bình thường
     + arrow func không có biến `this`, không có context biến `this` chính là context của cái hàm gần nhất mà nó nằm trong
+> Bài 5: Template string
+- Có thể gọi trực tiếp biến, thực hiện tính toán, có thể xuống dòng...
+> Bài 6: Arguments
+- Array-like object & arguments:
+    + Array-like object phải đảm bảo có thuộc tính length, có các index giống array (key: value)
+    + Arguments: arguments la 1 object
