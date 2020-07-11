@@ -55,3 +55,9 @@ const cat = {
 ```
 > Bài 12: class trong Javascript
 - Không phải ngôn ngữ OOP từ đầu, dùng oop để viết contructor func dạng OOP, dễ hiểu dễ đọc hơn.
+> Bài 13: Class inheritance (kế thừa)
+- Sử dụng `extends`
+- Sử dung prototype viết lại class
+> Bài 14: method overriding
+> Bài 15: super
+> Bài 16: static
